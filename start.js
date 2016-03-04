@@ -8,7 +8,7 @@ var favicon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXH
 var version = '1.9'
 var allowedplayers = ['']
 try{
-    var settings = require('./config.json')
+    var config = require('./config.json')
 }catch(e){
     throw new Error('config.json not found!')
 }
