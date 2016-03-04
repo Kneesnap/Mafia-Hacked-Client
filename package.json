@@ -1,0 +1,22 @@
+{
+  "name": "mafia",
+  "version": "1.0.0",
+  "description": "Minecraft 1.9 Hacked Client using a proxy",
+  "main": "start.js",
+  "scripts": {
+    "start": "node .start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annoyingcalc/Mafia-Hacked-Client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annoyingcalc/Mafia-Hacked-Client/issues"
+  },
+  "homepage": "https://github.com/annoyingcalc/Mafia-Hacked-Client#readme",
+  "dependencies": {
+    "minecraft-protocol": "^0.19.4"
+  }
+}

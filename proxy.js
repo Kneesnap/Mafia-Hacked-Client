@@ -107,7 +107,7 @@ class Proxy extends mc.createServer {
 					YAW : 0,
 					PITCH : 0
 				});
-				
+
 				targetClient
 					.on('login', (meta, data) => {
 						var send = this.loginServerEvent(client, data, meta);
@@ -169,11 +169,14 @@ function clientPacket(sender, data, meta){
 	var send=true;
 	return send;
 }
+
 module.exports = Proxy;
+
 function serverPacket(reciever, data, meta){
 	//console.log('Server packet hook! '+meta.name);
 	return true;
 }
+
 function loginServer(client, data, meta){
 	console.log(client.username+' logged in. ('+client.socket.remoteAddress+')')
 }
@@ -184,33 +187,36 @@ function sendMessage(client, msg){
 	msg=msg.replace(/&/g, '§');
 	msg=JSON.stringify(msg);
 	if(baseVersion() == '1.9'){
-		client.write('chat', {message : '{"text" : '+msg+'}'})	
+		client.write('chat', {message : '{"text" : '+msg+'}'})
 	}else{
 		client.write('chat', {message : msg})
 	}
 }
-function beforeLogin(client){
+
+function beforeLogin (client){
 	return;
 }
-function getClient(clients, username){
+
+function getClient (clients, username){
 	var send;
-	clients.forEach(function(a){
+	clients.forEach((a) => {
 		if(a.username == username){
-			send=a;
-			return a;
+			send = a
+			return a
 		}
-	});
-	return send;
+	})
+	return send
 }
-function baseVersion(){
+
+function baseVersion () {
 	var base = version.substr(0, 3);
-	if(base == '16w' || base == '15w'){
-		base='1.9';
+	if (base == '16w' || base == '15w') {
+		base='1.9'
 	}
-	return base;
+	return base
 }
 process.on('uncaughtException', (err) => {
- console.log('Error: '+err.stack);
- console.log(lastClientMeta)
- console.log(lastServerMeta)
-});	
+	console.log(`Error: ${err.stack}`)
+	console.log(lastClientMeta)
+	console.log(lastServerMeta)
+});

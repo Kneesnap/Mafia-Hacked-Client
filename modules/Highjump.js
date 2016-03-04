@@ -1,6 +1,5 @@
-/*
-	Highjump - jump higher
-*/
+// Highjump - jump higher
+
 var Module = require('../module.js');
 
 var hack = new Module({

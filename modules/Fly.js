@@ -1,6 +1,5 @@
-/*
-	Fly. Impersonate a bird or a plane.
-*/
+// Fly. Impersonate a bird or a plane.
+
 var Module = require('../module.js');
 var hooks = {};
 var hack = new Module({

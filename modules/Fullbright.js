@@ -1,6 +1,5 @@
-/*
-	Fullbright/Gamma mod. Pretty much the most useful hack ever.
-*/
+// Fullbright/Gamma mod. Pretty much the most useful hack ever.
+
 var Module = require('../module.js');
 
 var hack = new Module({
@@ -32,4 +31,4 @@ var hack = new Module({
 		}
 })
 
-module.exports = hack;
+module.exports = hack
