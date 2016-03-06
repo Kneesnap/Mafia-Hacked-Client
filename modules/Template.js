@@ -7,7 +7,7 @@ var hack = new Module({
 		alias: ['.test', '.mafia'], // different names that trigger this command.
 		help: 'Example Command',  //idk what help is
 		cmd: (sender, args, sendMessage) => {
-			sendMessage(sender, '&4[Mafia Client v1.0]'  //Some example chat message sent to the sender
+			sendMessage(sender, '&4[Mafia Client v1.0]')  //Some example chat message sent to the sender
 			sendMessage(sender, '&8Written by Kneesnap')
 			sendMessage(sender, '&8Using node-minecraft-protocol')
 		},

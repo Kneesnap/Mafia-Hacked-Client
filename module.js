@@ -2,16 +2,16 @@
 
 'use strict'
 
-function isFunction(fn) {
+function isFunction (fn) {
 	return typeof fn === 'function' ? fn : () => {}
 }
 
-function isObject(obj) {
+function isObject (obj) {
 	return typeof obj === 'object' ? obj : {}
 }
 
 class Module {
-	constructor(options) {
+	constructor (options) {
 		options = options || {}
 		this.options = options
 		this.enabled = typeof options.enabled === 'boolean' && options.enabled

@@ -6,7 +6,7 @@ var hack = new Module({
 		name: 'Annoy',
 		alias: ['.annoy'],
 		help: "Annoy other players",
-		cmd : (sender, args, sendMessage, targetClient) => {
+		cmd: (sender, args, sendMessage, targetClient) => {
 			if (args.length > 1) {
 				annoy = args[1]
 				sendMessage(sender, '&4[Mafia]&8 Now annoying &2'+args[1]);
@@ -23,8 +23,8 @@ var hack = new Module({
 		serverHook : {
 			'chat' : (sender, data, sendMessage, targetClient) => {
 				var json = JSON.parse(data['message'])
-				if(json['translate'] != undefined && json['translate'] == 'chat.type.text') {
-					if(json['with'][0]['text'].indexOf(annoy) != -1 && annoy != '') {
+				if(json.translate != undefined && json.translate == 'chat.type.text') {
+					if(json.with[0].text.indexOf(annoy) != -1 && annoy != '') {
 						sender.write('chat', {message : json['with'][1]})
 					}
 				}
