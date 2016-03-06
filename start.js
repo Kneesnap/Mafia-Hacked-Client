@@ -7,7 +7,11 @@ var Prox = require('./proxy.js')
 
 var version = '1.9'
 
-var config = JSON.parse(fs.readFileSync('./config.json'))
+try {
+	var config = require('./config.json')
+} catch (e) {
+	throw new Error('Config file could not be loaded!')
+}
 
 var mcProxy = new Prox({
 	username : config.username,

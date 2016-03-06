@@ -20,13 +20,6 @@ var hack = new Module({
 				}else{
 					return true;
 				}
-			},
-			'entity_effect' : (sender, data, sendMessage) => {
-				if(data['effectId'] == 18|| data['effectId'] == 15 || data['effectId'] == 2 || data['effectId'] == 4){
-					return false;
-				}else{
-					return true;
-				}
 			}
 		}
 })
